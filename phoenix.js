@@ -1,11 +1,13 @@
 let layouts = ["FullScreen", "TwoPane"];
 let currentLayout = 1;
 let stickyWindow = undefined;
+let leftWindow = undefined;
 
 const tileLeft = (window) => {
     let rectangle = Screen.main().visibleFrame();
     rectangle.width = rectangle.width / 2;
     window.setFrame(rectangle);
+    leftWindow = window;
 }
 
 const tileRight = (window) => {
@@ -76,7 +78,7 @@ let safariHandler = new Key("s", modifiers, () => {
 let calendarHandler = new Key("c", modifiers, () => {
     launchOrCycle("Calendar", "Calendar");
 });
-let codeHandler = new Key("v", modifiers, () => {
+let codeHandler = new Key("e", modifiers, () => {
     launchOrCycle("Code", "Visual Studio Code");
 });
 let remindersHandler = new Key("r", modifiers, () => {
@@ -101,4 +103,11 @@ let setStickyHandler = new Key("return", modifiers, () => {
 
 let layoutHandler = new Key("space", modifiers, () => {
     cycleLayouts();
+});
+
+let leftFocusHandler = new Key("1", modifiers, () => {
+    leftWindow.focus();
+});
+let stickyFocusHandler = new Key("2", modifiers, () => {
+    stickyWindow.focus();
 });
