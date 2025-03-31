@@ -96,6 +96,9 @@ let finderHandler = new Key("f", modifiers, () => {
 let githubHandler = new Key("g", modifiers, () => {
     launchOrCycle("GitHub Desktop", "GitHub Desktop");
 });
+let slackHandler = new Key("x", modifiers, () => {
+    launchOrCycle("Slack", "Slack");
+});
 
 let setStickyHandler = new Key("return", modifiers, () => {
     setStickyWindow(Window.focused());
