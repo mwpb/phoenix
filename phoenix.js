@@ -78,7 +78,7 @@ let safariHandler = new Key("s", modifiers, () => {
 let calendarHandler = new Key("c", modifiers, () => {
     launchOrCycle("Calendar", "Calendar");
 });
-let codeHandler = new Key("e", modifiers, () => {
+let codeHandler = new Key("v", modifiers, () => {
     launchOrCycle("Code", "Visual Studio Code");
 });
 let remindersHandler = new Key("r", modifiers, () => {
