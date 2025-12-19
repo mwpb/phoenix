@@ -104,6 +104,9 @@ let slackHandler = new Key("x", modifiers, () => {
 let zoomHandler = new Key("z", modifiers, () => {
   launchOrCycle("zoom.us", "zoom.us");
 });
+let vimHandler = new Key("e", modifiers, () => {
+  launchOrCycle("MacVim", "MacVim");
+});
 
 let setStickyHandler = new Key("return", modifiers, () => {
   setStickyWindow(Window.focused());
