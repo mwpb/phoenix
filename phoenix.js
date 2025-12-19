@@ -107,6 +107,12 @@ let zoomHandler = new Key("z", modifiers, () => {
 let vimHandler = new Key("e", modifiers, () => {
   launchOrCycle("MacVim", "MacVim");
 });
+let qSpaceHandler = new Key("q", modifiers, () => {
+  launchOrCycle("QSpace Pro", "QSpace Pro");
+});
+let iTermHandler = new Key("w", modifiers, () => {
+  launchOrCycle("iTerm2", "iTerm2");
+});
 
 let setStickyHandler = new Key("return", modifiers, () => {
   setStickyWindow(Window.focused());
