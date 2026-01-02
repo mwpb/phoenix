@@ -112,7 +112,7 @@ let vimHandler = new Key("e", modifiers, () => {
   launchOrCycle("MacVim", "MacVim");
 });
 let qSpaceHandler = new Key("q", modifiers, () => {
-  launchOrCycle("QSpace Pro", "QSpace Pro");
+  launchOrCycle("ForkLift", "ForkLift");
 });
 let iTermHandler = new Key("w", modifiers, () => {
   launchOrCycle("iTerm2", "iTerm");
