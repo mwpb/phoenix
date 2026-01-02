@@ -30,9 +30,13 @@ const tileNextWindow = (window) => {
 };
 
 const focusNextWindow = (app, appLauncher) => {
+  if (!app)
+    return App.launch(appLauncher, { focus: true });
+
   let windowCandidates = app.windows({ visible: true });
   if (windowCandidates.length === 0)
     return App.launch(appLauncher, { focus: true });
+
   if (app.name() !== App.focused().name()) return windowCandidates[0].focus();
   return windowCandidates[windowCandidates.length - 1].focus();
 };
@@ -111,7 +115,7 @@ let qSpaceHandler = new Key("q", modifiers, () => {
   launchOrCycle("QSpace Pro", "QSpace Pro");
 });
 let iTermHandler = new Key("w", modifiers, () => {
-  launchOrCycle("iTerm2", "iTerm2");
+  launchOrCycle("iTerm2", "iTerm");
 });
 
 let setStickyHandler = new Key("return", modifiers, () => {
