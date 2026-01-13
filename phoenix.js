@@ -30,8 +30,7 @@ const tileNextWindow = (window) => {
 };
 
 const focusNextWindow = (app, appLauncher) => {
-  if (!app)
-    return App.launch(appLauncher, { focus: true });
+  if (!app) return App.launch(appLauncher, { focus: true });
 
   let windowCandidates = app.windows({ visible: true });
   if (windowCandidates.length === 0)
@@ -109,10 +108,10 @@ let zoomHandler = new Key("z", modifiers, () => {
   launchOrCycle("zoom.us", "zoom.us");
 });
 let vimHandler = new Key("e", modifiers, () => {
-  launchOrCycle("MacVim", "MacVim");
+  launchOrCycle("Code", "Visual Studio Code");
 });
 let qSpaceHandler = new Key("q", modifiers, () => {
-  launchOrCycle("ForkLift", "ForkLift");
+  launchOrCycle("Finder", "Finder");
 });
 let iTermHandler = new Key("w", modifiers, () => {
   launchOrCycle("iTerm2", "iTerm");
