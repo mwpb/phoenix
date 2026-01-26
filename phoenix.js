@@ -83,20 +83,14 @@ let safariHandler = new Key("s", modifiers, () => {
 let calendarHandler = new Key("c", modifiers, () => {
   launchOrCycle("Calendar", "Calendar");
 });
-let codeHandler = new Key("v", modifiers, () => {
-  launchOrCycle("Code", "Visual Studio Code");
-});
 let remindersHandler = new Key("r", modifiers, () => {
   launchOrCycle("Reminders", "Reminders");
 });
 let mailHandler = new Key("m", modifiers, () => {
   launchOrCycle("Mail", "Mail");
 });
-let terminalHandler = new Key("t", modifiers, () => {
-  launchOrCycle("Terminal", "Terminal");
-});
 let finderHandler = new Key("f", modifiers, () => {
-  launchOrCycle("Finder", "Finder");
+  launchOrCycle("Firefox", "Firefox");
 });
 let githubHandler = new Key("g", modifiers, () => {
   launchOrCycle("GitHub Desktop", "GitHub Desktop");
