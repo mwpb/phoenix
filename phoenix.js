@@ -102,7 +102,7 @@ let zoomHandler = new Key("z", modifiers, () => {
   launchOrCycle("zoom.us", "zoom.us");
 });
 let vimHandler = new Key("e", modifiers, () => {
-  launchOrCycle("Code", "Visual Studio Code");
+  launchOrCycle("Zed", "Zed");
 });
 let qSpaceHandler = new Key("q", modifiers, () => {
   launchOrCycle("Finder", "Finder");
