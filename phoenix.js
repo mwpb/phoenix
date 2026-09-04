@@ -17,13 +17,17 @@ const tileRight = (window) => {
   window.setFrame(rectangle);
 };
 
+const maximise = (window) => {
+  window.maximise();
+}
+
 const setStickyWindow = (window) => {
   tileRight(window);
   stickyWindow = window;
 };
 
 const tileNextWindow = (window) => {
-  if (layouts[currentLayout] === "FullScreen") return window.maximise();
+  if (layouts[currentLayout] === "FullScreen") maximise(window);
   if (stickyWindow && window.hash() === stickyWindow.hash())
     return tileRight(window);
   return tileLeft(window);
@@ -43,7 +47,7 @@ const focusNextWindow = (app, appLauncher) => {
 const launchOrCycle = (appName, appLauncher) => {
   let app = App.get(appName);
   focusNextWindow(app, appLauncher);
-  tileNextWindow(Window.focused());
+  //tileNextWindow(Window.focused());
 };
 
 const cycleLayouts = () => {
@@ -81,7 +85,7 @@ let safariHandler = new Key("s", modifiers, () => {
   launchOrCycle("Safari", "Safari");
 });
 let calendarHandler = new Key("c", modifiers, () => {
-  launchOrCycle("Calendar", "Calendar");
+  launchOrCycle("Outlook", "Microsoft Outlook");
 });
 let remindersHandler = new Key("r", modifiers, () => {
   launchOrCycle("Reminders", "Reminders");
@@ -116,7 +120,8 @@ let setStickyHandler = new Key("return", modifiers, () => {
 });
 
 let layoutHandler = new Key("space", modifiers, () => {
-  cycleLayouts();
+  maximise(Window.focused());
+  //cycleLayouts();
 });
 
 let leftFocusHandler = new Key("1", modifiers, () => {
